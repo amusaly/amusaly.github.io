@@ -1,0 +1,15 @@
+<article class="card card-block" {% if post.id %}id="{{post.id}}"{% endif %}>
+
+  <h3 class="text-xs-center">{{post.title}}</h3>
+  <p class="text-muted text-xs-center">{{post.description}}</p>
+  <p class="text-xs-right readmore-link" >
+    <a data-toggle="collapse" href="#{{ post.title | slugify }}"
+       aria-expanded="false" aria-controls="{{ post.title | slugify }}">
+      Lire plus...
+    </a>
+  </p>
+
+  <div class="collapse" id="{{ post.title | slugify }}">
+    {{post.content}}
+  </div>
+</article>

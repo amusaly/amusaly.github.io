@@ -1,0 +1,18 @@
+
+.-fright {
+  float: right;
+}
+.-fclear-r {
+  clear: right;
+}
+
+.-fleft {
+  float: left;
+}
+.-fclear-l {
+  clear: left;
+}
+
+.-fclear {
+  clear:both;
+}

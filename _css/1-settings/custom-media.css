@@ -1,0 +1,23 @@
+
+
+
+@custom-media --xl (width >= 75em);
+@custom-media --lg (62em <= width < 75em);
+@custom-media --md (48em <= width < 62em);
+@custom-media --sm (34em <= width < 48em);
+@custom-media --xs (width <  34em);
+/**/
+@custom-media --xs-up (width >= 0);
+@custom-media --sm-up (width >= 34em); /* 544px up */
+@custom-media --md-up (width >= 48em); /* 768px up */
+@custom-media --lg-up (width >= 62em); /* 992px up */
+@custom-media --xl-up (width >= 75em); /* 1200px up */
+
+@custom-media --xs-down (width < 34em);
+@custom-media --sm-down (width < 48em);
+@custom-media --md-down (width < 62em);
+@custom-media --lg-down (width < 75em);
+@custom-media --xl-down (width > 0);
+/**/ 
+@custom-media --high-dppx (-webkit-min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi), (min-resolution: 1.5dppx);

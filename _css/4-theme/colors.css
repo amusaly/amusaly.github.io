@@ -1,0 +1,28 @@
+/* typography & colors */
+html, body {
+  color: var(--logo-grey);
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--logo-red);
+}
+a, a:any-link {
+  /*color: color(var(--logo-green) shade(20%));/***/
+  color: var(--darker-logo-yellow);
+  font-weight: bold;
+  /*position: relative;
+  left: -.3em;
+  right: .3em;
+  padding: 0 .3em;/**/
+}
+a:hover {
+	/*background-color: color(var(--logo-green) shade(20%));
+	color: color(var(--logo-yellow) tint(20%));/**/
+}
+ul > li:before,
+ol > li:before {
+  color: var(--logo-red);
+}
+
+.-bg-white {
+	background: white;
+}

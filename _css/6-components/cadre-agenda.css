@@ -1,0 +1,26 @@
+
+.actualités-agenda {
+  width: 22em;
+  margin: 0 0 0 1em;
+  padding: 0;
+  border: 1px solid black;
+
+  & h3 {
+    background: var(--logo-red);
+    color: white;
+    padding: .3em .5em 0;
+    margin: 0;
+  }
+  & p {
+    padding: .3em .5em;
+    margin-bottom: 0;
+  }
+
+  @media (--sm-down) {
+    width: 100%;
+    margin: 1em 0;
+  }
+  @media (--md) {
+    width: 25em;
+  }
+}

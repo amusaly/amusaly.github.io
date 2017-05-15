@@ -1,0 +1,31 @@
+@import 'normalize.css/normalize.css';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+h1:first-child {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+:last-child {
+  margin-bottom: 0;
+}
+

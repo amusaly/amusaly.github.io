@@ -1,0 +1,182 @@
+---
+title: Concerts
+layout: default
+---
+
+<div>
+  <h1>Agenda</h1>
+
+{% assign latest = 0 %}
+{% assign previous = 0 %}
+{% assign title_shown = false %}
+
+{% for unused in site.categories.concerts %}
+  {% assign found = false %}
+  {% assign latest = 0 %}
+
+  {% for post in site.categories.concerts %}
+    {% assign concert_date = post.concerts.first.date %}
+    <p hidden>Examining {{ post.title }} # {{ post.concerts.first.date }}<br>
+    {{ latest }} # {{ previous }}</p>
+
+    {% if concert_date < site.time %}
+      {% continue %}
+    {% endif %}
+
+    {% if latest == 0 or concert_date < latest %}
+      {% if previous != 0 and concert_date <= previous %}
+        <p hidden>skipping {{post.title}}</p>
+        {% continue %}
+      {% endif %}
+      <p hidden>found {{post.title}}</p>
+
+      {% assign latest = concert_date %}
+      {% assign found = post %}
+    {% endif %}
+  {% endfor %}
+
+  {% if found %}
+    {% assign previous = found.concerts.first.date %}
+    <p hidden>
+      {{ found.title }}
+      {{ found.permalink }}
+    </p>
+
+    {% if title_shown == false %}
+      {% assign title_shown = true %}
+      <h2>Prochains concerts</h2>
+      <div class="grid-box -of2 -of3-lg -gutters">
+    {% endif %}
+
+    <a class="concert-card" href="{{ found.url }}">
+    {% if found.affiche %}
+      <figure>
+        <img src="{{ found.affiche }}" alt="" />
+      </figure>
+    {% else %}
+      <div aspect-ratio="A4">
+        <div>
+          <p>{{ found.title }}</p>
+        {% if found.description %}
+          <p>{{ found.description }}</p>
+        {% endif %}
+        {% for concert in found.concerts %}
+          <p>
+          {% if concert.date_approx %}
+            {{ concert.date_approx }}
+          {% elsif concert.date %}
+            {% assign date = concert.date %}
+            {% include date.long.fr %} à {{ date | date: "%H:%M" }}
+          {% endif %}
+          <br>
+          {% if concert.lieu and concert.address %}
+            {{ concert.lieu }} - {{ concert.address }}
+          {% elsif concert.lieu %}
+            {{ concert.lieu }}
+          {% elsif concert.address %}
+            {{ concert.address }}
+          {% endif %}
+          </p>
+        {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    </a>
+  {% endif %}
+{% endfor %}
+{% if title_shown %}
+  </div>
+{% endif %}
+
+  <h2>Concerts passés</h2>
+  <div class="grid-box -of2 -of3-lg -gutters">
+
+{% assign latest = 0 %}
+{% assign previous = 0 %}
+
+{% for unused in site.categories.concerts %}
+  {% assign found = false %}
+  {% assign latest = 0 %}
+
+  {% for post in site.categories.concerts %}
+    {% assign concert_date = post.concerts.first.date %}
+    <p hidden>Examining {{ post.title }} # {{ post.concerts.first.date }}<br>
+    {{ latest }} # {{ previous }}</p>
+
+    {% if concert_date > site.time %}
+      {% continue %}
+    {% endif %}
+
+    {% if latest == 0 or concert_date > latest %}
+      {% if previous != 0 and concert_date >= previous %}
+        <p hidden>skipping {{post.title}}</p>
+        {% continue %}
+      {% endif %}
+      <p hidden>found {{post.title}}</p>
+
+      {% assign latest = concert_date %}
+      {% assign found = post %}
+
+      {% if concert_date > site.time %}
+        {% assign upcoming_concert = true %}
+      {% else %}
+        {% assign upcoming_concert = false %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% if found %}
+    {% assign previous = found.concerts.first.date %}
+    <p hidden>
+      {{ found.title }}
+      {{ found.permalink }}
+    </p>
+
+    <a class="concert-card" href="{{ found.url }}">
+    {% if found.affiche %}
+      <figure>
+        <img src="{{ found.affiche }}" alt="" />
+      </figure>
+    {% else %}
+      <div aspect-ratio="A4">
+        <div>
+          <p>{{ found.title }}</p>
+        {% for concert in found.concerts %}
+          <p>
+            {{ concert.date | date: "%Y-%m-%d"}} à 
+          {% if concert.lieu and concert.address %}
+            {{ concert.lieu }} - {{ concert.address }}
+          {% elsif concert.lieu %}
+            {{ concert.lieu }}
+          {% elsif concert.address %}
+            {{ concert.address }}
+          {% endif %}
+          </p>
+        {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    </a>
+  {% endif %}
+{% endfor %}
+
+    <a class="concert-card" href="http://ims-lyon.com/concerts/75-concert-24-25-juin" target="_blank">
+      <figure>
+        <!--figcaption>Le dernier concert de l'IMSL</figcaption-->
+        <img src="/images/affiches/24-25-juin-2016.jpg" alt="" />
+      </figure>
+    </a>
+    <a class="concert-card" href="http://ims-lyon.com/concerts/74-concert-27-mai" target="_blank">
+      <figure>
+        <!--figcaption>Le concert du 27 mai</figcaption-->
+        <img src="/images/affiches/concert du 27 mai.png" alt="" />
+      </figure>
+    </a><!---->
+    <a class="concert-card" href="http://ims-lyon.com/concerts/70-dulcissime-jesu-janvier-2016" target="_blank">
+      <figure>
+        <!--figcaption>Le concert avec Céladon</figcaption-->
+        <img src="/images/affiches/STELLA ORIENTALIS FLYER - light.jpg" alt="" />
+      </figure>
+    </a><!---->
+  </div>
+</div>

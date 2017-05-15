@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd' [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+]>
+<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 510.236 464.882" xml:space="preserve" height="464.88px" viewBox="0 0 510.236 464.882" width="510.24px" version="1.1" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink">
+<switch>
+	<foreignObject y="0" x="0" height="1" width="1" requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/">
+	</foreignObject>
+	<g>
+			<defs>
+				<rect id="b" width="510.24" height="464.88"/>
+			</defs>
+			<clipPath id="a">
+				<use overflow="visible" xlink:href="#b"/>
+			</clipPath>
+			<path fill="#F9F1E6" d="m292.54 309.88c-38.385 27.189-68.773 43.184-105.56 43.184-25.59 0-57.577-14.395-79.169-40.783 38.385-38.386 99.161-94.364 126.35-113.56l58.38 111.16zm0-193.52c-30.388-58.377-37.585-69.573-98.362-68.773h-119.96v12.795h4.798c46.382 0 90.365 15.994 106.36 46.382l26.389 48.781c-20.791 50.38-74.37 103.96-131.15 151.94l-60.778 51.18c27.19 32.788 58.378 61.575 107.96 61.575 24.791 0 49.581-3.997 95.163-35.985l79.169-56.777 32.787 61.576c10.396 19.192 37.586 31.187 65.575 31.187 32.787 0 63.175-2.398 97.562-6.396v-12.795c-38.385 0-60.776-2.399-98.361-76.771l-107.16-207.93z" clip-path="url(#a)"/>
+	</g>
+</switch>
+</svg>

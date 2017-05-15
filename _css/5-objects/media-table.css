@@ -1,0 +1,22 @@
+
+.media-table {
+	display: table;
+
+	& > :first-child {
+		display: table-cell;
+		width: 1px; /* set width from contents */
+	}
+	& > :nth-child(2) {
+		display: table-cell;
+		width: 100%; /* grow to fit space */
+	}
+
+	&.-vcenter > :first-child,
+	&.-vcenter > :nth-child(2) {
+		vertical-align: middle;
+	}
+
+	& > .-vcenter {
+		vertical-align: middle;
+	}
+}

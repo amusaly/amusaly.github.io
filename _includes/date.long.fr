@@ -1,0 +1,5 @@
+{% capture weekday %}{% include weekday.fr %}{% endcapture %}
+{{ weekday | capitalize }},
+{{ date | date: '%d' }}
+{% include month.fr %}
+{{ date | date: '%Y' }}

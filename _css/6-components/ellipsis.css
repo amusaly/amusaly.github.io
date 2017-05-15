@@ -1,0 +1,17 @@
+
+@media(--md-down){
+  .ellipsis-md {
+    height: 7em;
+    overflow-y: hidden;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(#FFFFFF00, #FFFFFF)
+    }
+  }
+}

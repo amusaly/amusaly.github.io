@@ -1,0 +1,4 @@
+
+a:not([href]) {
+	outline: 5px solid red;
+}

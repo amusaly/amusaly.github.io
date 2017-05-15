@@ -1,0 +1,9 @@
+.mq-display {
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	border-radius: .2em;
+	background: black;
+	color: white;
+	padding: 0 .4em;
+}

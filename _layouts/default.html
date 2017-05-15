@@ -1,0 +1,128 @@
+---
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {% if page.robots %}
+    <meta name="robots" content="{{ page.robots }}">
+  {% endif %}
+
+    {% seo %}
+
+    <link rel="shortcut icon" href="/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Hind:300|Crimson+Text:400,700' rel='stylesheet' type='text/css'>
+
+  {% if page.permalink %}
+    <link rel="canonical" href="{{page.permalink}}">
+  {% endif %}
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/favicons/manifest.json">
+    <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#a00631">
+    <meta name="apple-mobile-web-app-title" content="Amusaly.fr">
+    <meta name="application-name" content="Amusaly.fr">
+    <meta name="msapplication-TileColor" content="#a00631">
+    <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#a00631">
+
+    <link rel="stylesheet" type="text/css" href="/compiled_assets/styles.css?{{ site.time | date: '%s' }}">
+
+  </head>
+  <body>
+<!--[if IE ]>
+    <iframe src="https://browser-update.org/fr/update.html" style="width: 100%; height: 100%;"></iframe>
+<![endif]-->
+<!--[if ! IE ]><!-->
+    <div class="flex -col -row-lg -mh100p">
+      <header class="site-nav -lg -mh100p">
+        <a href="/" class="site-logo"><img src="/images/logo_Amvsaly.svg"/></a>
+        <nav class="-tcenter">
+          <label for=menu class="menu-item menu-toggle">Menu</label>
+          
+          <input type="checkbox" id="menu" class="hidden"/>
+          <label for=menu class="slide-in">
+            
+            <a class="menu-item" href="/">Accueil</a>
+            <a class="menu-item" href="/l'association">Qui sommes-nous&nbsp;?</a>
+            <a class="menu-item" href="/chanter">Chanter</a>
+            <a class="menu-item" href="/progresser">Progresser</a>
+            <a class="menu-item" href="/concerts">Concerts</a>
+            <a class="menu-item" href="/s'inscrire">S'inscrire</a>
+            <a class="menu-item" href="/contact">Contact</a>
+            <!--a class="menu-item" href="#liens">Partenaires</a-->
+          </label>
+        </nav>
+
+      </header>
+      <main class="-p-a-1 -grow">
+        <div class="flex -col -mh100p">
+          <div class="-grow">
+          {{content}}
+          </div>
+          <footer class="page-footer -m-t-a">
+            <hr />
+            <img src="/images/rosace.svg" alt="" />
+          </footer>
+        </div>
+      </main>
+    </div>
+    <footer class="site-footer"><!--
+      <p>
+        Académie de musique sacrée de Lyon - Amusaly
+        <br/>2 rue Ste Hélène, 69002 Lyon
+        <br/>Directeur de publication&nbsp;: Philip Cameron
+      </p>
+      <p>
+        Site hébergé par Planethoster
+        <!--<br/>88 Colin P Kelly Junior Street, San Francisco, CA 94107, United States- ->
+      </p>
+      <p>
+        Toute représentation ou reproduction intégrale ou partielle faite sans le consentement de
+        l'auteur ou de ses ayants droit ou ayants cause est illicite. Il en est de même pour la
+        traduction, l'adaptation ou la transformation, l'arrangement ou la reproduction par un art
+        ou un procédé quelconque. Ils peuvent également, s'ils le souhaitent, signaler que les
+        contenus peuvent être reproduits, mais avec mention de la source et éventuellement un lien
+        pointant vers le contenu original.
+      </p>
+      <p>
+        Alors que nous avons effectué toutes les démarches pour nous assurer de la fiabilité des
+        informations contenues sur ce site internet, l'association Amusaly ne peut
+        encourir aucune responsabilité du fait d'erreurs, d'omissions, ou pour les résultats qui
+        pourraient être obtenus par l'usage de ces informations.
+      </p>-->
+    </footer>
+    <script>
+      // browser update notification
+      var $buoop = {
+        c:2,
+        //test:true,
+        l:'fr'
+      }; 
+      function $buo_f(){ 
+       var e = document.createElement("script"); 
+       e.src = "//browser-update.org/update.min.js"; 
+       document.body.appendChild(e);
+      };
+      try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+      catch(e){window.attachEvent("onload", $buo_f)}
+    </script> 
+<!--<![endif]-->
+  </body>
+</html>

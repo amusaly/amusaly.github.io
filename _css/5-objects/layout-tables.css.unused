@@ -1,0 +1,158 @@
+/* table-layout */
+
+.layout-box {
+  display: table;
+  width: 100%;
+}
+
+.layout-box.-horizontal {
+
+  & > * {
+    display: table-cell;
+    vertical-align: top;
+    width: 1px;
+
+    &.--grow {
+      width: 100%;
+    }
+  }
+}
+
+.layout-box.-vertical {
+  min-height: 100%;
+
+  & > * {
+    display: block;
+    height: 1px;
+
+    &.--grow {
+      height: 100%;
+    }
+  }
+
+  & > .-before {
+    display: table-header-group;
+  }
+  & > .-after {
+    display: table-footer-group;
+  }
+}
+
+.layout-box.-vcenter > * {
+  vertical-align: middle;
+}
+
+.layout-box > .layout-box {
+  outline: 10px solid red; /* highlight potential problems */
+}
+
+@media (--xs-up) {
+  .layout-box {
+    &.-horizontal-xs.-horizontal-xs {
+      width: 100%;
+    }
+    &.-horizontal-xs.-horizontal-xs > * {
+      display: table-cell;
+      vertical-align: top;
+      height: 100%;
+    }
+    &.-vertical-xs > * {
+      display: table-row;
+    }
+    &.-vertical-xs > .-before-xs {
+      display: table-header-group;
+    }
+    &.-vertical-xs > .-after-xs {
+      display: table-footer-group;
+    }
+  }
+}
+
+@media (--sm-up) {
+  .layout-box {
+    &.-horizontal-sm.-horizontal-sm {
+      width: 100%;
+    }
+    &.-horizontal-sm.-horizontal-sm > * {
+      display: table-cell;
+      vertical-align: top;
+      height: 100%;
+    }
+    &.-vertical-sm > * {
+      display: table-row;
+    }
+    &.-vertical-sm > .-before-sm {
+      display: table-header-group;
+    }
+    &.-vertical-sm > .-after-sm {
+      display: table-footer-group;
+    }
+  }
+}
+
+@media (--md-up) {
+  .layout-box {
+    &.-horizontal-md.-horizontal-md {
+      width: 100%;
+    }
+    &.-horizontal-md.-horizontal-md > * {
+      display: table-cell;
+      vertical-align: top;
+      height: 100%;
+    }
+    &.-vertical-md > * {
+      display: table-row;
+    }
+    &.-vertical-md > .-before-md {
+      display: table-header-group;
+    }
+    &.-vertical-md > .-after-md {
+      display: table-footer-group;
+    }
+  }
+}
+
+@media (--lg-up) {
+  .layout-box {
+    &.-horizontal-lg.-horizontal-lg {
+      width: 100%;
+    }
+    &.-horizontal-lg.-horizontal-lg > * {
+      display: table-cell;
+      vertical-align: top;
+      height: 100%;
+    }
+    &.-vertical-lg > * {
+      display: table-row;
+    }
+    &.-vertical-lg > .-before-lg {
+      display: table-header-group;
+    }
+    &.-vertical-lg > .-after-lg {
+      display: table-footer-group;
+    }
+  }
+}
+
+@media (--xl-up) {
+  .layout-box {
+    &.-horizontal-xl.-horizontal-xl {
+      width: 100%;
+    }
+    &.-horizontal-xl.-horizontal-xl > * {
+      display: table-cell;
+      vertical-align: top;
+      height: 100%;
+    }
+    &.-vertical-xl > * {
+      display: table-row;
+    }
+    &.-vertical-xl > .-before-xl {
+      display: table-header-group;
+    }
+    &.-vertical-xl > .-after-xl {
+      display: table-footer-group;
+    }
+  }
+}
+/**/

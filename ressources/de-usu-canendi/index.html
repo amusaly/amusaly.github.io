@@ -1,0 +1,97 @@
+---
+morceaux:
+  -
+    name: 
+      "Ave Regina Caelorum - Valls"
+    files:
+      - "Valls-aver_Soprano__Choeur_1.mp3"
+      - "Valls-aver_Alto_choeur_1.mp3"
+      - "Valls-aver_Tenor_choeur_1.mp3"
+      - "Valls-aver_Basse_choeur_1.mp3"
+      - "Valls-aver_Soprano__Choeur_2.mp3"
+      - "Valls-aver_Alto_choeur_2.mp3"
+      - "Valls-aver_Tenor_choeur_2.mp3"
+      - "Valls-aver_Basse_choeur_2.mp3"
+    midi:
+      "Valls-aver.mid"
+  -
+    name: 
+      "Bone Pastor - Valls"
+    files:
+      - "Valls-Bone_pastor_Choeur 1_S.mp3"
+      - "Valls-Bone_pastor_Choeur 1_A.mp3"
+      - "Valls-Bone_pastor_Choeur 1_T.mp3"
+      - "Valls-Bone_pastor_Choeur 1_B.mp3"
+      - "Valls-Bone_pastor_Choeur 2_S.mp3"
+      - "Valls-Bone_pastor_Choeur 2_A.mp3"
+      - "Valls-Bone_pastor_Choeur 2_T.mp3"
+      - "Valls-Bone_pastor_Choeur 2_B.mp3"
+  -
+    name: 
+      "Bone Pastor - Valls - version 2"
+    files:
+      - "Version_2_Bone_pastor_1_S.mp3"
+      - "Version_2_Bone_pastor_1_A.mp3"
+      - "Version_2_Bone_pastor_1_T.mp3"
+      - "Version_2_Bone_pastor_1_B.mp3"
+      - "Version_2_Bone_pastor_2_S.mp3"
+      - "Version_2_Bone_pastor_2_A.mp3"
+      - "Version_2_Bone_pastor_2_T.mp3"
+      - "Version_2_Bone_pastor_2_B.mp3"
+  -
+    name:
+      "Halicha lekeisarya : Eli, Eli"
+    files:
+      - "Halicha_lekeisarya_eli_eli_soprano.mp3"
+      - "Halicha_lekeisarya_eli_eli_alto.mp3"
+      - "Halicha_lekeisarya_eli_eli_tenor_.mp3"
+      - "Halicha_lekeisarya_eli_eli_basses.mp3"
+      - "Halicha_lekeisarya_eli_eli_piano_seul.mp3"
+  - 
+    name:
+      "Dofta vit syrén - Wikander"
+    files:
+      - "Dofta_dofta_vit_syren Soprano.mp3"
+      - "Dofta_dofta_vit_syren Alto 1 _ 2.mp3"
+      - "Dofta_dofta_vit_syren Tenor.mp3"
+      - "Dofta_dofta_vit_syren Basse 1 _ 2.mp3"
+  - 
+    name:
+      "Calme des nuits"
+    files:
+      - "Calme_des_nuits_Soprane.mp3"
+      - "Calme_des_nuits_Alto.mp3"
+      - "Calme_des_nuits_Ténor.mp3"
+      - "Calme_des_nuits_Bariton.mp3"
+      - "Calme_des_nuits_Basse.mp3"
+  - 
+    name:
+      "Egues - Domine, quando veneris"
+    files:
+      - "Egues-Domine,_quando_veneris_Soprane.mp3"
+      - "Egues-Domine,_quando_veneris_Alto.mp3"
+      - "Egues-Domine,_quando_veneris_Ténor.mp3"
+      - "Egues-Domine,_quando_veneris_Basse.mp3"
+  - 
+    name:
+      "Salve Regina II - Anerio"
+    files:
+      - "Salve_Regina_II_Anerio_Soprane.mp3"
+      - "Salve_Regina_II_Anerio_Alto.mp3"
+      - "Salve_Regina_II_Anerio_Ténor.mp3"
+      - "Salve_Regina_II_Anerio_Basse.mp3"
+---
+<h1>Morceaux de travail pour De Usu Canendi</h1>
+
+{% for morceau in page.morceaux %}
+<h2>{{ morceau.name }}</h2>
+{% for file in morceau.files %}
+<p>
+  {{ file }}
+  <audio controls>
+    <source src="/ressources/de-usu-canendi/{{ file }}" type="audio/mpeg">
+  </audio>
+  <a href="/ressources/de-usu-canendi/{{ file }}">Télécharger</a>
+</p>
+{% endfor %}
+{% endfor %}

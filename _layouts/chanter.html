@@ -1,0 +1,114 @@
+---
+layout: default
+---
+
+
+
+
+
+  <h1>{{ page.title }}
+
+    {% if page.subtitle and page.subtitle != "" %}
+      <p class="subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+  </h1>
+
+{% if page.flash and page.flash != "" %}
+  <p class="-tcenter flash-message">
+    {{ page.flash }}
+  </p>
+{% endif %}
+
+  <div class="flex -col -row-lg">
+    <div class="-grow">
+
+    {% if page.intro and page.intro != "" %}
+      <p class="text-xs-center">{{ page.intro }}</p>
+    {% endif %}
+
+      <h3 class="-m-a-0">{{ page.section_1_title }}</h3>
+      <p>{{ page.section_1 }}</p>
+    {% if page.section_1_long and page.section_1_long != "" %}
+      <p>{{ page.section_1_long }}</p>
+    {% endif %}
+
+      <h3 class="-m-a-0">{{ page.section_2_title }}</h3>
+      <p>{{ page.section_2 }}</p>
+    {% if page.section_2_long and page.section_2_long != "" %}
+      <p>{{ page.section_2_long }}</p>
+    {% endif %}
+
+      {{ content }}
+
+    </div>
+    <ul class="practical-info">
+
+    {% if page.image and page.image != "" %}
+      <li class="-hidden-lg-down -w100p">
+        {% if page.image_lien and page.image_lien != "" %}
+          <a class="img-link" href="{{ page.image_lien }}" target="_blank">
+            <img alt="" src="{{ page.image }}" />
+          </a>
+        {% else %}
+          <img alt="" src="{{ page.image }}" />
+        {% endif %}
+      </li>
+    {% endif %}
+
+      <li>
+        <h3 class="site-title">{{ page.section_3_title }}</h3>
+        <div class="flex -row -vcenter">
+          <img class="-h3em -p-r-half -block" src="{% if page.profimage %}{{ page.profimage }}{% else %}/images/band-master.svg{% endif %}" alt=""/>
+          <p>{{ page.section_3 }}</p>
+        </div>
+      </li>
+
+      <li>
+        <h3 class="-m-a-0">Quand</h3>
+        <p>{{ page.quand }}</p>
+      </li>
+
+      <li>
+        <h3 class="-m-a-0">Tarif</h3>
+        <p>{{ page.tarifs }}</p>
+      </li>
+
+      <li>
+        <h3 class="-m-a-0">Où</h3>
+            
+        <p class="">
+          {{ page.adresse }}
+          <br/>
+        {% if page.citymapper_lien and page.citymapper_lien != "" %}
+          <a href='{{ page.citymapper_lien }}' target="_blank">Itinéraire bus et métro</a>
+        {% else if page.directions_lien and page.directions_lien != "" %}
+          <a href='{{ page.directions_lien }}' target="_blank">Directions</a>
+        {% endif %}
+        </p>
+
+        {% if page.gps and page.gps != "" %}
+          {% capture map %}{{ page.gps | url_encode }}{% endcapture %}
+        {% else %}
+          {% capture map %}{{ page.adresse | url_encode }}{% endcapture %}
+        {% endif %}
+        <a class="google-map" href="https://maps.google.com/maps?q={{ map }}" target="_blank">
+          <img src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyDdApn75N-I3rxSf-WSvN_RSeYo204Ngn8&zoom=15&size=300x220&scale=2&markers={{ map }}"/>
+        </a>
+
+      </li>
+
+    {% if (page.inscription and page.inscription != "") or (page.plaquette and page.plaquette != "") %}
+      <li>
+        <h3 class="-m-a-0">S'inscrire</h3>
+      {% if page.plaquette and page.plaquette != "" %}
+        <p><a href="{{ page.plaquette }}" target="_blank">Brochure complète</a></p>
+      {% endif %}
+      {% if page.inscription and page.inscription != "" %}
+        <p><a href="{{ page.inscription }}" target="_blank">Télécharger le bulletin d'inscription</a></p>
+      {% endif %}
+      </li>
+    {% endif %}
+
+    </ul>
+  </div>
+

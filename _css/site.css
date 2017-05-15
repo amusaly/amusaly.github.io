@@ -1,0 +1,35 @@
+@import '1-settings/*'; /* */
+@import '2-tools/*'; /* */
+@import '3-reset/*'; /* */
+@import '4-theme/*'; /* */
+@import '5-objects/*'; /* */
+@import '6-components/*'; /* */
+@import '7-utilities/*'; /* */
+@import 'custom'; /* */
+
+/*
+
+postcss-sorting { "sort-order": "zen" } can help reduce gzipped css file size by a little
+
+From ITCSS
+
+Settings: Global vars, config switches, brand colors, brand fonts - no styles here
+Tools: mixins & functions - no styles here
+Reset: ground zero styles, normalize, resets, box-sizing
+Theme: unclassed html elements, h1-h6, links, lists
+Objects: Cosmetic free design elements - classnames only, generic names
+Components: Designed components, ui elements - more explicit classnames
+Trumps: helpers and overrides
+
+/*
+
+From RSCSS
+
+components named with .two-words
+elements named with one .titlebox
+  style with .the-component > .element {}
+variants named with a dash -variant
+generic helpers named with an underscore _center
+
+components don't position themselves, only their children
+/**/

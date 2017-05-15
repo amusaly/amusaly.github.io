@@ -1,0 +1,86 @@
+:root {
+  /*  Colors */
+
+  --logo-red:    #A00631;
+  --logo-green:  #8c9465;
+  --logo-yellow: #D3A15A;
+  --logo-grey:   #5b4848;
+  --logo-big-a:  #F9F1E6;
+  --darker-logo-yellow: #cc892a;
+
+  /*  Grayscale and brand colors for use across Bootstrap. */
+
+  --gray-dark:        var(--logo-grey);                /* #373a3c; */
+  --gray:             color(var(--logo-grey) tint(15%));  /* #55595c; */
+  --gray-light:       color(var(--logo-grey) tint(40%));  /* #818a91; */
+  --gray-lighter:     color(var(--logo-grey) tint(60%));  /* #eceeef; */
+  --gray-lightest:    color(var(--logo-grey) tint(80%));  /* #f7f7f9; */
+
+  --brand-primary:    var(--logo-red);                 /* #0275d8; */
+  --brand-success:    saturate(color(var(--logo-green) tint(4%)), 54); /* #5cb85c; */
+  --brand-info:       #5bc0de;
+  --brand-warning:    #f0ad4e;
+  --brand-danger:     #d9534f;
+
+  --flash-height: 1.6em;
+
+
+  --space:                     1em;
+  --space-lg:                  var(--space);
+
+  /*  Body */
+  /*  */
+  /*  Settings for the `<body>` element. */
+
+  --body-bg:                    #fff;
+  --body-color:                 var(--gray-dark);
+
+
+  /*  Links */
+  /*  */
+  /*  Style anchor elements. */
+
+  --link-color:                 var(--brand-primary);
+  --link-decoration:            none;
+  --link-hover-color:           color(var(--link-color) shade(15%));
+  --link-hover-decoration:      underline;
+
+
+  /*  Grid breakpoints */
+  /*  */
+  /*  Define the minimum and maximum dimensions at which your layout will change, */
+  /*  adapting to different screen sizes, for use in media queries. */
+
+  /*  Small screen / phone 544px */
+  --size-sm: 34em;
+  /*  Medium screen / tablet 768px */
+  --size-md: 48em;
+  /*  Large screen / desktop 992px */
+  --size-lg: 62em;
+  /*  Extra large screen / wide desktop 1200px */
+  --size-xl: 75em;
+
+
+  /*  Grid containers */
+  /*  */
+  /*  Define the maximum width of `.container` for different screen sizes. */
+
+  /*--container-max-widths: (
+    sm: 576px,
+    md: 720px,
+    lg: 940px,
+    xl: 1140px
+  );/**/
+
+
+  /*  Typography */
+  /*  */
+  /*  Font, line-height, and color for body text, headings, and more. */
+
+  --font-family-sans-serif:     "Hind Light", Hind, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-serif:          "Crimson Text", Georgia, "Times New Roman", Times, serif;
+  --font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace;
+  --font-family-base:           var(--font-family-sans-serif);
+
+  --text-muted:                  var(--gray-light);
+}

@@ -1,0 +1,7 @@
+body > .buorg {
+  background-size: 20px; /* slightly larger icon */
+  font-size: 16px; /* larger text */
+}
+body > .buorg div {
+  padding-left: 44px; /* accommodate larger icon */
+}

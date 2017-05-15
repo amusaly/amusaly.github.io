@@ -1,0 +1,17 @@
+
+.-p-a-half { padding: calc(.5 * var(--space)); }
+.-p-a-1 { padding: var(--space); }
+
+.-p-x-1 { padding-left: var(--space); padding-right: var(--space); }
+.-p-y-1 { padding-top: var(--space); padding-bottom: var(--space); }
+
+.-p-b-half { padding-bottom: calc(.5 * var(--space)); }
+.-p-r-half { padding-right: calc(.5 * var(--space)); }
+.-p-t-1 { padding-top: var(--space); }
+.-p-r-1 { padding-right: var(--space); }
+.-p-b-1 { padding-bottom: var(--space); }
+.-p-l-1 { padding-left: var(--space); }
+
+
+.-m-a-0 { margin: 0; }
+.-m-l-1 { margin-left: 1em; }

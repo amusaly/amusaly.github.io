@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div>
+
+<!--
+At top of page in a vertically optimised presentation
+- commentaire s'il y en a sur le verso du flyer
+- où/comment acheter billets
+- comment aller au lieu du concert
+
+-->
+
+{% if page.affiche and page.affiche != "" %}
+  <img class="affiche-concert" src="{{ page.affiche }}" alt=""/>
+  {{ content }}
+{% else %}
+  <div class="sans-affiche">
+    {{ content }}
+  </div>
+{% endif %}
+</div>

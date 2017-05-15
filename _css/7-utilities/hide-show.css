@@ -1,0 +1,92 @@
+/* hidden elements based on screen size */
+
+.hidden,
+[hidden] {
+	display: none;
+}
+
+@media (--xs) {
+	.-hidden-xs {
+		display: none;
+	}
+}
+@media (--sm) {
+	.-hidden-sm {
+		display: none;
+	}
+}
+@media (--md) {
+	.-hidden-md {
+		display: none;
+	}
+}
+@media (--lg) {
+	.-hidden-lg {
+		display: none;
+	}
+}
+@media (--xl) {
+	.-hidden-xl {
+		display: none;
+	}
+}
+
+@media (--xs-up) {
+	.-hidden-xs-up {
+		display: none;
+	}
+}
+
+@media (--sm-up) {
+	.-hidden-sm-up {
+		display: none;
+	}
+}
+
+@media (--md-up) {
+	.-hidden-md-up {
+		display: none;
+	}
+}
+
+@media (--lg-up) {
+	.-hidden-lg-up {
+		display: none;
+	}
+}
+
+@media (--xl-up) {
+	.-hidden-xl-up {
+		display: none;
+	}
+}
+
+@media (--xs-down) {
+	.-hidden-xs-down {
+		display: none;
+	}
+}
+
+@media (--sm-down) {
+	.-hidden-sm-down {
+		display: none;
+	}
+}
+
+@media (--md-down) {
+	.-hidden-md-down {
+		display: none;
+	}
+}
+
+@media (--lg-down) {
+	.-hidden-lg-down {
+		display: none;
+	}
+}
+
+@media (--xl-down) {
+	.-hidden-xl-down {
+		display: none;
+	}
+}

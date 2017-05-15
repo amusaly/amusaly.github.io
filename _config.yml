@@ -1,0 +1,59 @@
+kramdown:
+  input: GFM
+  hard_wrap: false
+encoding: utf-8
+gems:
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+exclude:
+  - '*.sublime-*'
+  - browserslist
+  - CNAME
+  - Gemfile*
+  - node_modules
+  - package.json
+  - sftp_batchfile*
+  - webpack.config.js
+  - TODO.md
+  - yarn.lock
+  - npm-debug.log
+sass:
+  style: compressed
+  sass_dir: _sass
+permalink: /:categories/:year/:month/:slug/
+timezone: Europe/Paris
+defaults:
+-
+  scope:
+    path: ""
+    type: "pages"
+  values:
+    layout: default
+-
+  scope:
+    path: ""
+    type: "posts"
+  values:
+    layout: post
+-
+  scope:
+    path: "ressources"
+  values:
+    robots: noindex, nofollow
+-
+  scope:
+    path: "chanter"
+  values:
+    layout: chanter
+-
+  scope:
+    path: "progresser"
+  values:
+    layout: chanter
+-
+  scope:
+    path: "concerts"
+    type: "posts"
+  values:
+    layout: concert

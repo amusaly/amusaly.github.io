@@ -1,0 +1,6 @@
+<article class="card card-block" {% if post.id %}id="{{post.id}}"{% endif %}>
+
+  <h3 class="text-xs-center">{{post.title}}</h3>
+  <p class="text-muted text-xs-center">{{post.description}}</p>
+  {{post.content}}
+</article>

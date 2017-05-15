@@ -1,0 +1,20 @@
+
+.-vcenter-transform {
+  position: relative;
+  top: 50%; /* of parent */
+  transform: translateY(-50%); /* of self */
+}
+
+.-center-both {
+	display: table-cell;
+	vertical-align: center;
+	text-align: center;
+}
+
+.-tcenter {
+	text-align: center;
+}
+
+.-tleft {
+	text-align: left;
+}

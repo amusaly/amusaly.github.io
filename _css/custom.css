@@ -1,0 +1,182 @@
+
+
+/* backgrounds and images */
+main {
+  background: url("/images/A_orclair.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: -8em 0;
+}
+
+
+.page-footer {
+  text-align: right;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+
+  & > hr {
+    flex: 1 0 auto; /* 2 */
+    outline: none;
+    border: none;
+    margin: 0;
+    background:url("/images/line.png");
+    background-position: 0 63%;
+    background-repeat: repeat-x;
+    background-size: auto 3px;
+  }
+
+  & > img {
+    flex: 0 0 5.3em;
+    width: 5.3em;
+    margin-right: -.85em;
+    display: block;
+  }
+}
+
+
+
+/* cards */
+
+.activity-card > figure {
+  background: color(var(--logo-green) shade(15%));
+  color: color(var(--logo-yellow) tint(20%));
+  font-family: var(--font-family-serif);
+  text-align: center;
+}
+a.activity-card:any-link {
+  display: block;
+  color: color(var(--logo-yellow) tint(20%));
+  text-decoration: none;
+}
+a.activity-card:hover > figure > img {
+  transform: scale(1.05);
+}
+.activity-card > figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+.activity-card > figure > img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s;
+}
+.activity-card > figure > figcaption {
+  padding: 1em;
+}/**/
+
+.prof-card > figure {
+  background: color(var(--logo-green) shade(15%));
+  color: color(var(--logo-yellow) tint(20%));
+  font-family: var(--font-family-serif);
+  text-align: center;
+}
+a.prof-card:any-link {
+  display: block;
+  color: color(var(--logo-yellow) tint(20%));
+  text-decoration: none;
+}
+a.prof-card:hover > figure img {
+  transform: scale(1.05);
+}
+.prof-card > figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+.prof-card > figure img {
+  width: 100%;
+  display: block;
+  /*transition: transform 0.1s;/**/
+  /*transform: scale(1.05);/**/
+}
+.prof-card > figure > figcaption {
+  padding: 1em;
+  position: static;
+}/**/
+
+
+.concert-card > figure,
+.concert-card > div {
+  bbackground: color(var(--logo-green) shade(15%));
+  ccolor: color(var(--logo-yellow) tint(20%));
+  ffont-family: var(--font-family-serif);/**/
+  margin: 0;
+  text-align: center;
+}
+a.concert-card:any-link {
+  display: block;
+  ccolor: color(var(--logo-yellow) tint(20%));
+  text-decoration: none;
+}
+a.concert-card:hover > figure > img {
+  transform: scale(1.05);
+}
+.concert-card > figure,
+.concert-card > div {
+  margin: 0;
+  position: relative;
+}
+.concert-card > figure > img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s;
+  box-shadow: 0 0 3px 2px var(--gray-light);
+  box-shadow: 0 0 3px 2px color(var(--logo-grey) a(50%))
+}
+.concert-card > figure > figcaption {
+  padding: 1em;
+}
+.concert-card > div {
+  background: white;
+  background: #fff8;
+  border: 1px dashed var(--logo-grey);
+}
+.concert-card > div > div {
+  padding: 1em .7em;
+}
+
+
+/* more specific stuff */
+
+.photos-CA {
+  margin-bottom: 1em;
+}
+.photos-CA:after { /* another clearfix method which sometimes avoids scrollbars */
+  content:"";
+  display:block;
+  clear:both;
+}
+.photos-CA > img {
+  float: left;
+  width: calc(100% / 10);
+}
+
+#beta:target > .mq-display {
+  display: block;
+}
+
+.mentions-legales {
+  font-size: .7em;
+}
+
+.la-rentrée {
+  margin-top: 1em;
+  padding: 1em 1em;
+  border: 2px solid var(--logo-green);
+  position: relative;
+  background: rgba(255,255,255,.7);
+
+  & > h2:first-child {
+    margin: 0;
+    position: absolute;
+    bottom: calc(100% - .3em + 2px);
+    left: calc(50% - 4.9em);
+  }
+}
+
+.affiche-concert {
+  box-shadow: 0 0 3px 3px var(--gray-light);
+  box-shadow: 0 0 3px 3px rgba(91,72,72,.5);
+}

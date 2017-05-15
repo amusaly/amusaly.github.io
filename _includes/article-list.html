@@ -1,0 +1,10 @@
+
+{% assign slugs = page.url | split: "/" %}
+{% assign category = slugs[1] %}
+{% for post in site.posts %}
+  {% for cat in post.categories %}
+    {% if cat == category %}
+      {% include article.html %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}

@@ -1,0 +1,1 @@
+{% assign dy = date | date: "%a" %}{% case dy %}{% when "Mon" %}lundi{% when "Tue" %}mardi{% when "Wed" %}mercredi{% when "Thu" %}jeudi{% when "Fri" %}vendredi{% when "Sat" %}samedi{% when "Sun" %}dimanche{% else %}{{ dy }}{% endcase %}

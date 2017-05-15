@@ -1,0 +1,18 @@
+
+.-show-pointer.-show-pointer {
+	position: relative;
+	padding-bottom: .8em;
+
+	&::after {
+		content: "En savoir plus...";
+		position: absolute;
+		right: .5em;
+		bottom: .07em;
+		font-size: .7em;
+	}
+
+	&:hover {
+	  cursor: pointer;
+	  box-shadow: 0 0 .1em .1em color(var(--logo-grey) alpha(20%));
+	}
+}

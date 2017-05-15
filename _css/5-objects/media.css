@@ -1,0 +1,21 @@
+.media-object {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1em;
+
+  & > :first-child {
+    margin-right: 1em;
+  }
+  & > :nth-child(2) {
+    flex: 1;
+  }
+
+  & > :first-child.-center {
+    align-self: center;
+  }
+  & > :first-child.-right {
+    order: 1;
+    margin-right: 0;
+    margin-left: 1em;
+  }
+}

@@ -1,0 +1,93 @@
+
+body.-no-scroll {
+	overflow: hidden;
+}
+
+.modal-trigger {
+	display: none;
+}
+
+.modal-trigger:checked + .modal {
+	display: block;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10000;
+	overflow: hidden;
+
+	& > label {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: #000A;
+		z-index: -1;
+	}
+}
+
+.modal > section {
+	background: white;
+	z-index: 10001;
+
+	margin-top: var(--space);
+	margin-right: auto;
+	margin-bottom: var(--space);
+	margin-left: auto;
+
+	padding: 0;
+	max-width: 45em;
+	max-height: calc(100% - 2 * var(--space));
+
+	display: flex;
+	flex-direction: column;
+
+	& > header > label {
+		float: right;
+  	padding: 0.8em 1.1em .4em;
+
+  	& > span {
+  		font-size: 1.5em;
+    	line-height: 1;
+  	}
+	}
+
+	& > header {
+		flex: none;
+		padding: var(--space);
+		border-bottom: 1px solid var(--logo-grey);
+
+		& > h3 {
+			margin: 0;
+		}
+	}
+
+	& > :not(header):not(footer) {
+		flex: 0 1 auto;
+		overflow-y: scroll;
+		padding: var(--space);
+
+		& > :first-child {
+			margin-top: 0;
+		}
+
+		background: /* Shadow covers */ linear-gradient(white 30%, rgba(255,255,255,0)), linear-gradient(rgba(255,255,255,0), white 70%) 0 100%, /* Shadows */ radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.2), rgba(0,0,0,0)), radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+    background-attachment: local, local, scroll, scroll;
+	}
+
+	& > footer {
+		flex: none;
+		padding: var(--space);
+		border-top: 1px solid var(--logo-grey);
+		text-align: right;
+	}
+}
