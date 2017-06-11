@@ -82,10 +82,52 @@ prose:
         field:
           label: "Description"
           element: text
-          help: "Description pour Google"
+          help: "Description pour Google (facultatif)"
           value: ""
     
+    _profs:
+      - name: "published"
+        field:
+          label: "Publié"
+          element: "checkbox"
+          value: "true"
+      - name: "description"
+        field:
+          label: "Description"
+          element: text
+          help: "Description pour Google (facultatif)"
+          value: ""
+      - name: "title"
+        field:
+          label: "Prénom Nom"
+          element: text
+          value: ""
+      - name: "photo"
+        field:
+          label: "Lien vers sa photo"
+          help: "La photo doit avoir un rapport largeur-hauteur de 7x10"
+          element: text
+          value: ""
+      - name: "show_in_list"
+        field:
+          label: "Afficher sur la page des profs"
+          help: "Nous n'affichons sur la page des profs que les profs habituels"
+          element: checkbox
+          value: "false"
+      
+    
     chanter:
+      - name: "published"
+        field:
+          label: "Publié"
+          element: "checkbox"
+          value: "true"
+      - name: "description"
+        field:
+          label: "Description"
+          element: text
+          help: "Description pour Google (facultatif)"
+          value: ""
       - name: "subtitle"
         field:
           label: "Sous-titre"
@@ -128,7 +170,7 @@ prose:
         field:
           label: "Description"
           element: text
-          help: "Description pour Google"
+          help: "Description pour Google (facultatif)"
           value: ""
     
       - name: "concert_1_date"
