@@ -24,43 +24,43 @@ sass:
 permalink: /:categories/:year/:month/:slug/
 timezone: Europe/Paris
 defaults:
--
-  scope:
-    path: ""
-    type: "pages"
-  values:
-    layout: default
--
-  scope:
-    path: ""
-    type: "posts"
-  values:
-    layout: post
--
-  scope:
-    path: "ressources"
-  values:
-    robots: noindex, nofollow
--
-  scope:
-    path: "chanter"
-  values:
-    layout: chanter
--
-  scope:
-    path: "progresser"
-  values:
-    layout: chanter
--
-  scope:
-    path: "concerts"
-    type: "posts"
-  values:
-    layout: concert
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  -
+    scope:
+      path: "ressources"
+    values:
+      robots: noindex, nofollow
+  -
+    scope:
+      path: "chanter"
+    values:
+      layout: chanter
+  -
+    scope:
+      path: "progresser"
+    values:
+      layout: chanter
+  -
+    scope:
+      path: "concerts"
+      type: "posts"
+    values:
+      layout: concert
 prose:
   rooturl: ''
   ignore:
-    - _css
+    - /_css
     - /_includes
     - /_jsx
     - /_layouts
@@ -79,7 +79,7 @@ prose:
     - amusaly.sublime-project
     - browerslist
     - midi.html
-    - *.js
+    - "*.js"
   siteurl: 'https://amusaly.github.io/'
   relativeLinks: 'https://amusaly.github.io/links.jsonp'
   media: 'images'
