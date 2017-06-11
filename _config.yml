@@ -80,6 +80,8 @@ prose:
     - browerslist
     - midi.html
     - "*.js"
+    - CNAME
+    - "*.pdf"
   siteurl: 'https://amusaly.github.io/'
   relativeLinks: 'https://amusaly.github.io/links.jsonp'
   media: 'images'
