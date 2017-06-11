@@ -1,4 +1,8 @@
 ---
+published: true
+title: 1 les concerts de juin
+---
+---
 ---
 Un chef, deux choeurs, un concert de musique baroque sacrée
 
