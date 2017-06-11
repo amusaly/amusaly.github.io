@@ -119,11 +119,18 @@ prose:
           options: "https://amusaly.github.io/profs.jsonp"
     
     _concerts:
-      - name: "affiche"
+      - name: "published"
         field:
-          element: "text"
-          help: "Chemin de l'affiche"
+          label: "Publié"
+          element: "checkbox"
+          value: "true"
+      - name: "description"
+        field:
+          label: "Description"
+          element: text
+          help: "Description pour Google"
           value: ""
+    
       - name: "concert_1_date"
         field:
           element: "text"

@@ -26,20 +26,16 @@ layout: default
   {% endif %}
 
   <a class="concert-card" href="{{ concert.url }}">
-  {% if concert.affiche %}
-    <figure>
-      <img src="{{ concert.affiche }}" alt="" />
+    <figure aspect-ratio="A4">
+      {% assign images = concert.content | split:"<img " %}
+      {% for image in images %}
+        {% if image contains 'src=' %}
+          {% assign imageMarkup = image | split:">" | first %}
+          <img {{ imageMarkup }}>
+          {% break %}
+        {% endif %}
+      {% endfor %}
     </figure>
-  {% else %}
-    <div aspect-ratio="A4">
-      <div>
-        <p>{{ concert.title }}</p>
-      {% if concert.description %}
-        <p>{{ concert.description }}</p>
-      {% endif %}
-      </div>
-    </div>
-  {% endif %}
   </a>
 {% endfor %}
 {% if title_shown %}
@@ -67,20 +63,16 @@ layout: default
   {% endif %}
 
   <a class="concert-card" href="{{ concert.url }}">
-  {% if concert.affiche %}
-    <figure>
-      <img src="{{ concert.affiche }}" alt="" />
+    <figure aspect-ratio="A4">
+      {% assign images = concert.content | split:"<img " %}
+      {% for image in images %}
+        {% if image contains 'src=' %}
+          {% assign imageMarkup = image | split:">" | first %}
+          <img {{ imageMarkup }}>
+          {% break %}
+        {% endif %}
+      {% endfor %}
     </figure>
-  {% else %}
-    <div aspect-ratio="A4">
-      <div>
-        <p>{{ concert.title }}</p>
-      {% if concert.description %}
-        <p>{{ concert.description }}</p>
-      {% endif %}
-      </div>
-    </div>
-  {% endif %}
   </a>
 {% endfor %}
 
