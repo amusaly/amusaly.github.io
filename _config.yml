@@ -93,31 +93,7 @@ prose:
     concerts/_posts:
       - name: "title"
         field:
+          - label: "titre"
           - element: "text"
-          - placeholder: "Titre affiché par le navigateur"
-          - value: ""
-      - name: "description"
-        field:
-          - element: "text"
-          - placeholder: "Description pour Google"
-          - value: ""
-      - name: "affiche"
-        field:
-          - element: "text"
-          - placeholder: "Chemin de l'affiche"
-          - value: ""
-      - name: "concert_1_date"
-        field:
-          - element: "text"
-          - placeholder: "Date du 1er concert"
-          - value: ""
-      - name: "concert_1_lieu"
-        field:
-          - element: "text"
-          - placeholder: "Lieu du 1er concert"
-          - value: ""
-      - name: "concert_1_adresse"
-        field:
-          - element: "text"
-          - placeholder: "Adresse du lieu du 1er concert"
+          - help: "Titre affiché par le navigateur"
           - value: ""
