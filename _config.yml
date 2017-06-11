@@ -95,7 +95,7 @@ prose:
   siteurl: "https://amusaly.fr/"
   media: images
   metadata:
-    "":
+    "_concerts":
       - name: "title"
         field:
           - label: Titre
