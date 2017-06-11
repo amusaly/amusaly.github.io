@@ -62,6 +62,20 @@ defaults:
       layout: concert
 prose:
   rooturl: ''
+  metadata:
+    "":
+      - name: "title"
+        field:
+          - label: Titre
+          - element: text
+          - help: "Titre affiché par le navigateur"
+          - value: ""
+      - name: "description"
+        field:
+          - label: Description
+          - element: text
+          - help: "Description pour Google"
+          - value: ""
   ignore:
     - /_css
     - /_includes
@@ -94,17 +108,3 @@ prose:
     - /ressources
   siteurl: "https://amusaly.fr/"
   media: images
-  metadata:
-    "_concerts":
-      - name: "title"
-        field:
-          - label: Titre
-          - element: text
-          - help: "Titre affiché par le navigateur"
-          - value: ""
-      - name: "description"
-        field:
-          - label: Description
-          - element: text
-          - help: "Description pour Google"
-          - value: ""
