@@ -60,7 +60,7 @@ defaults:
 prose:
   rooturl: ''
   ignore:
-    - /_css
+    - _css
     - /_includes
     - /_jsx
     - /_layouts
