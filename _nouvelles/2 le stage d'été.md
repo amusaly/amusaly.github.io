@@ -1,4 +1,5 @@
 ---
+published: true
 ---
 
 Le stage d'été "<a href="/chanter/stage-d'été">Le retour des Splendeurs du Roy</a>" se tiendra du 23 au 27 août.
