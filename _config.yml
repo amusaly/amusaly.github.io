@@ -85,7 +85,7 @@ prose:
           help: "Description pour Google"
           value: ""
     
-    chanter/_posts:
+    chanter:
       - name: "subtitle"
         field:
           label: "Sous-titre"
