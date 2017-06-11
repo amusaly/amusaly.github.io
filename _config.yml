@@ -73,47 +73,56 @@ prose:
           value: "true"
       - name: "description"
         field:
-          - label: Description
-          - element: text
-          - help: "Description pour Google"
-          - value: ""
+          label: "Description"
+          element: text
+          help: "Description pour Google"
+          value: ""
+    
+    chanter/_posts:
+      - name: "subtitle"
+        field:
+          label: "Sous-titre"
+          help: "Sous-titre affiché en vert"
+          element: text
+          value: ""
+    
     _concerts:
       - name: "affiche"
         field:
-          - element: "text"
-          - help: "Chemin de l'affiche"
-          - value: ""
+          element: "text"
+          help: "Chemin de l'affiche"
+          value: ""
       - name: "concert_1_date"
         field:
-          - element: "text"
-          - help: "Date du 1er concert"
-          - value: ""
+          element: "text"
+          help: "Date du 1er concert"
+          value: ""
       - name: "concert_1_lieu"
         field:
-          - element: "text"
-          - help: "Lieu du 1er concert"
-          - value: ""
+          element: "text"
+          help: "Lieu du 1er concert"
+          value: ""
       - name: "concert_1_adresse"
         field:
-          - element: "text"
-          - help: "Adresse du lieu du 1er concert"
-          - value: ""
+          element: "text"
+          help: "Adresse du lieu du 1er concert"
+          value: ""
           
       - name: "concert_2_date"
         field:
-          - element: "text"
-          - help: "Date du 1er concert"
-          - value: ""
+          element: "text"
+          help: "Date du 1er concert"
+          value: ""
       - name: "concert_2_lieu"
         field:
-          - element: "text"
-          - help: "Lieu du 1er concert"
-          - value: ""
+          element: "text"
+          help: "Lieu du 1er concert"
+          value: ""
       - name: "concert_2_adresse"
         field:
-          - element: "text"
-          - help: "Adresse du lieu du 1er concert"
-          - value: ""
+          element: "text"
+          help: "Adresse du lieu du 1er concert"
+          value: ""
 
   ignore:
     - /_css
