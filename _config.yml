@@ -25,43 +25,50 @@ permalink: /:categories/:year/:month/:slug/
 timezone: Europe/Paris
 collections:
   concerts:
-    layout: concert
+    output: true
+  profs:
+    output: true
+    permalink: /les-profs/:name/
+  activites:
+    output: true
+    permalink: /activites/:name/
   nouvelles:
     output: false
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
       layout: default
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: post
-  -
-    scope:
+  - scope:
       path: "ressources"
     values:
       robots: noindex, nofollow
-  -
-    scope:
+  - scope:
       path: "chanter"
     values:
       layout: chanter
-  -
-    scope:
+  - scope:
       path: "progresser"
     values:
       layout: chanter
-  -
-    scope:
-      path: "concerts"
-      type: "posts"
+  - scope:
+      path: _concerts
     values:
       layout: concert
+  - scope:
+      path: _profs
+    values:
+      layout: prof
+  - scope:
+      path: _activites
+    values:
+      layout: chanter
 prose:
   rooturl: ''
   metadata:
@@ -85,6 +92,31 @@ prose:
           help: "Sous-titre affiché en vert"
           element: text
           value: ""
+      - name: "flash"
+        field:
+          label: "Sous-titre"
+          help: "Gros text affiché en jaune avec des notes musicales autour"
+          element: text
+          value: ""
+      
+      - name: "image"
+        field:
+          label: "Lien de l'image qui sera affichée en tête des infos pratiques (facultatif)"
+          help: "Par exemple, le logo de Céladon"
+          element: text
+          value: ""
+      - name: "image_lien"
+        field:
+          label: "Lien utilisé si on clique sur l'image (facultatif)"
+          help: "Par exemple, le site de Céladon"
+          element: text
+          value: ""
+      
+      - name: "profs"
+        field:
+          label: "Profs"
+          element: multiselect
+          options: "https://amusaly.github.io/profs.jsonp"
     
     _concerts:
       - name: "affiche"

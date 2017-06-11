@@ -2,6 +2,10 @@
 layout: default
 ---
 
-        <h1>{{ page.title }}</h1>
-        <!--p><a href="/les-profs">Retourner à la page des profs</a></p-->
-        {{ page.bio }}
+<h1>{{ page.title }}</h1>
+{% if page.photo and page.photo != "" %}
+  <img class="-hidden-lg-down" style="float:right;" alt="" src="{{ page.photo }}" />
+{% endif %}
+{{ content }}
+<div style="clear:both;">
+<!--p><a href="/les-profs">Retourner à la page des profs</a></p-->

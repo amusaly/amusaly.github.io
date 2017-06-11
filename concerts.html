@@ -5,160 +5,85 @@ layout: default
 
 <div>
   <h1>Agenda</h1>
+  
+{% capture now %}{{ "now" | date: "%Y-%m-%d" }}{% endcapture %}
+{% assign concerts = site.concerts | sort: "concert_1_date" | reverse %}
 
-{% assign latest = 0 %}
-{% assign previous = 0 %}
 {% assign title_shown = false %}
+{% for concert in concerts %}
+  {% assign concert_date = concert.concert_1_date | date: "%Y-%m-%d" %}
+  
+  <p hidden>Examining {{ concert.concert_1_date }}</p>
 
-{% for unused in site.concerts %}
-  {% assign found = false %}
-  {% assign latest = 0 %}
-
-  {% for post in site.concerts %}
-    {% assign concert_date = post.concert_1_date %}
-    <p hidden>Examining {{ post.title }} # {{ post.concert_1_date }}<br>
-    {{ latest }} # {{ previous }}</p>
-
-    {% if concert_date < site.time %}
-      {% continue %}
-    {% endif %}
-
-    {% if latest == 0 or concert_date < latest %}
-      {% if previous != 0 and concert_date <= previous %}
-        <p hidden>skipping {{post.title}}</p>
-        {% continue %}
-      {% endif %}
-      <p hidden>found {{post.title}}</p>
-
-      {% assign latest = concert_date %}
-      {% assign found = post %}
-    {% endif %}
-  {% endfor %}
-
-  {% if found %}
-    {% assign previous = found.concert_1_date %}
-    <p hidden>
-      {{ found.title }}
-      {{ found.permalink }}
-    </p>
-
-    {% if title_shown == false %}
-      {% assign title_shown = true %}
-      <h2>Prochains concerts</h2>
-      <div class="grid-box -of2 -of3-lg -gutters">
-    {% endif %}
-
-    <a class="concert-card" href="{{ found.url }}">
-    {% if found.affiche %}
-      <figure>
-        <img src="{{ found.affiche }}" alt="" />
-      </figure>
-    {% else %}
-      <div aspect-ratio="A4">
-        <div>
-          <p>{{ found.title }}</p>
-        {% if found.description %}
-          <p>{{ found.description }}</p>
-        {% endif %}
-        {% for concert in found.concerts %}
-          <p>
-          {% if concert.date_approx %}
-            {{ concert.date_approx }}
-          {% elsif concert.date %}
-            {% assign date = concert.date %}
-            {% include date.long.fr %} à {{ date | date: "%H:%M" }}
-          {% endif %}
-          <br>
-          {% if concert.lieu and concert.address %}
-            {{ concert.lieu }} - {{ concert.address }}
-          {% elsif concert.lieu %}
-            {{ concert.lieu }}
-          {% elsif concert.address %}
-            {{ concert.address }}
-          {% endif %}
-          </p>
-        {% endfor %}
-        </div>
-      </div>
-    {% endif %}
-    </a>
+  {% if concert_date < now %}
+    {% continue %}
   {% endif %}
+
+  {% if title_shown == false %}
+    {% assign title_shown = true %}
+    <h2>Prochains concerts</h2>
+    <div class="grid-box -of2 -of3-lg -gutters">
+  {% endif %}
+
+  <a class="concert-card" href="{{ concert.url }}">
+  {% if concert.affiche %}
+    <figure>
+      <img src="{{ concert.affiche }}" alt="" />
+    </figure>
+  {% else %}
+    <div aspect-ratio="A4">
+      <div>
+        <p>{{ concert.title }}</p>
+      {% if concert.description %}
+        <p>{{ concert.description }}</p>
+      {% endif %}
+      </div>
+    </div>
+  {% endif %}
+  </a>
 {% endfor %}
 {% if title_shown %}
   </div>
 {% endif %}
 
+
   <h2>Concerts passés</h2>
   <div class="grid-box -of2 -of3-lg -gutters">
 
-{% assign latest = 0 %}
-{% assign previous = 0 %}
 
-{% for unused in site.concerts %}
-  {% assign found = false %}
-  {% assign latest = 0 %}
+{% for concert in concerts %}
+  {% assign concert_date = concert.concert_1_date | date: "%Y-%m-%d" %}
+  
+  <p hidden>Examining {{ concert.concert_1_date }}</p>
 
-  {% for post in site.concerts %}
-    {% assign concert_date = post.concert_1_date %}
-    <p hidden>Examining {{ post.title }} # {{ post.concert_1_date }}<br>
-    {{ latest }} # {{ previous }}</p>
-
-    {% if concert_date > site.time %}
-      {% continue %}
-    {% endif %}
-
-    {% if latest == 0 or concert_date > latest %}
-      {% if previous != 0 and concert_date >= previous %}
-        <p hidden>skipping {{post.title}}</p>
-        {% continue %}
-      {% endif %}
-      <p hidden>found {{post.title}}</p>
-
-      {% assign latest = concert_date %}
-      {% assign found = post %}
-
-      {% if concert_date > site.time %}
-        {% assign upcoming_concert = true %}
-      {% else %}
-        {% assign upcoming_concert = false %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-
-  {% if found %}
-    {% assign previous = found.concert_1_date %}
-    <p hidden>
-      {{ found.title }}
-      {{ found.permalink }}
-    </p>
-
-    <a class="concert-card" href="{{ found.url }}">
-    {% if found.affiche %}
-      <figure>
-        <img src="{{ found.affiche }}" alt="" />
-      </figure>
-    {% else %}
-      <div aspect-ratio="A4">
-        <div>
-          <p>{{ found.title }}</p>
-        {% for concert in found.concerts %}
-          <p>
-            {{ concert.date | date: "%Y-%m-%d"}} à 
-          {% if concert.lieu and concert.address %}
-            {{ concert.lieu }} - {{ concert.address }}
-          {% elsif concert.lieu %}
-            {{ concert.lieu }}
-          {% elsif concert.address %}
-            {{ concert.address }}
-          {% endif %}
-          </p>
-        {% endfor %}
-        </div>
-      </div>
-    {% endif %}
-    </a>
+  {% if concert_date > now %}
+    {% continue %}
   {% endif %}
+
+  {% if title_shown == false %}
+    {% assign title_shown = true %}
+    <h2>Prochains concerts</h2>
+    <div class="grid-box -of2 -of3-lg -gutters">
+  {% endif %}
+
+  <a class="concert-card" href="{{ concert.url }}">
+  {% if concert.affiche %}
+    <figure>
+      <img src="{{ concert.affiche }}" alt="" />
+    </figure>
+  {% else %}
+    <div aspect-ratio="A4">
+      <div>
+        <p>{{ concert.title }}</p>
+      {% if concert.description %}
+        <p>{{ concert.description }}</p>
+      {% endif %}
+      </div>
+    </div>
+  {% endif %}
+  </a>
 {% endfor %}
+
 
     <a class="concert-card" href="http://ims-lyon.com/concerts/75-concert-24-25-juin" target="_blank">
       <figure>

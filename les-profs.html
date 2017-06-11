@@ -1,0 +1,25 @@
+---
+title: Les professeurs
+permalink: /les-profs/
+---
+
+<div>
+  <h1>L'académie de musique sacrée de Lyon</h1>
+  <h2>Les professeurs</h2>
+
+  <div class="grid-box -full -of2-sm -of3-lg -of4-xl -gutters">
+    {% for prof in site.profs %}
+      {% if prof.show_in_list %}
+        <a class="prof-card" href="{{ prof.url }}">
+          <figure>
+            <div aaspect-ratio="7:10">
+              <img src="{{ prof.photo }}" />
+            </div>
+            <figcaption>{{ prof.title | replace: " ", "<br/>" }}</figcaption>
+          </figure>
+        </a>
+      {% endif %}
+    {% endfor %}
+  
+  </div>
+</div>
