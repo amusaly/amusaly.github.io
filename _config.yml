@@ -88,14 +88,20 @@ prose:
     - _config.yml
     - "*.html"
     - "*.ignore"
+    - /ressources
   siteurl: 'https://amusaly.github.io/'
   relativeLinks: 'https://amusaly.github.io/links.jsonp'
   media: 'images'
   metadata:
-    concerts:
+    "":
       - name: "title"
         field:
           - label: "titre"
           - element: "text"
           - help: "Titre affiché par le navigateur"
+          - value: ""
+      - name: "description"
+        field:
+          - element: "text"
+          - help: "Description pour Google"
           - value: ""
