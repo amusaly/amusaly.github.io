@@ -179,12 +179,19 @@ prose:
         field:
           label: "Profs"
           element: multiselect
+          alterable: false
           options: "https://amusaly.github.io/profs.jsonp"
       
       - name: quand
         field:
           label: Quand
-          element: text
+          element: textarea
+          value: ""
+      
+      - name: tarifs
+        field:
+          label: Tarifs
+          element: textarea
           value: ""
       
       - name: adresse
