@@ -90,7 +90,7 @@ prose:
   relativeLinks: 'https://amusaly.github.io/links.jsonp'
   media: 'images'
   metadata:
-    concerts/_posts:
+    concerts:
       - name: "title"
         field:
           - label: "titre"
