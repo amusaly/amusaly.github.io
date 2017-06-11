@@ -86,6 +86,7 @@ prose:
     - favicon.ico
     - package.json
     - _config.yml
+    - "*.html"
   siteurl: 'https://amusaly.github.io/'
   relativeLinks: 'https://amusaly.github.io/links.jsonp'
   media: 'images'
