@@ -94,7 +94,6 @@ prose:
       - name: "title"
         field:
           - element: "text"
-          - value: ""
           - placeholder: "Titre affiché par le navigateur"
           - value: ""
       - name: "description"
