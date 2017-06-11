@@ -87,7 +87,7 @@ prose:
     - package.json
     - _config.yml
     - "*.html"
-    - ignore.me
+    - "*.ignore"
   siteurl: 'https://amusaly.github.io/'
   relativeLinks: 'https://amusaly.github.io/links.jsonp'
   media: 'images'
