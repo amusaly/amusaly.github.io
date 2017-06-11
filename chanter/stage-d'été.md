@@ -1,4 +1,5 @@
 ---
+layout: old-chanter
 title: "Stage d'été 2017 ...Suite des Splendeurs du Roy "
 subtitle: "Musique baroque au temps de Louis XIV et Louis XV "
 flash: ""

@@ -104,8 +104,14 @@ prose:
           value: ""
       - name: "photo"
         field:
-          label: "Lien vers sa photo"
+          label: "Lien vers une grande photo"
           help: "La photo doit avoir un rapport largeur-hauteur de 7x10"
+          element: text
+          value: ""
+      - name: "small-photo"
+        field:
+          label: "Lien vers une petite photo"
+          help: "La photo doit montrer juste la tête"
           element: text
           value: ""
       - name: "show_in_list"
@@ -116,12 +122,21 @@ prose:
           value: "false"
       
     
-    chanter:
+    _activites:
       - name: "published"
         field:
           label: "Publié"
           element: "checkbox"
           value: "true"
+      - name: "category"
+        field:
+          label: Catégorie
+          element: multiselect
+          options:
+            - name: Chanter
+              value: chanter
+            - name: Progresser
+              value: progresser
       - name: "description"
         field:
           label: "Description"
@@ -154,11 +169,60 @@ prose:
           element: text
           value: ""
       
+      - name: profs_title
+        field:
+          label: Titre du champ \"profs\"
+          help: Par exemple, \"Le prof\", \"L'équipe pédagogique\"
+          element: text
+          value: Chef de choeur
       - name: "profs"
         field:
           label: "Profs"
           element: multiselect
           options: "https://amusaly.github.io/profs.jsonp"
+      
+      - name: quand
+        field:
+          label: Quand
+          element: text
+          value: ""
+      
+      - name: adresse
+        field:
+          label: Adresse du lieu
+          help: Il faut mettre une vraie adresse, car elle sera utilisée centrer la carte
+          element: text
+          value: 16 rue des Chartreux, 69001 Lyon
+      - name: citymapper_lien
+        field:
+          label: Lien citymapper (facultatif)
+          help: "Si l'activité se déroule à Lyon on peut mettre le lien citymapper pour le transport en commun"
+          element: text
+          value: https://citymapper.com/go/dcthqv
+      - name: directions_lien
+        field:
+          label: Lien pour directions (facultatif)
+          help: "Si l'activité à lieu dans un lieu retiré et leur site web donne les directions, on peut mettre un lien vers leur site"
+          element: text
+          value: ""
+      - name: gps
+        field:
+          label: Coordonnés gps (facultatif)
+          help: "Parfois Google maps se trompe sur l'adresse et dans ce cas on peut lui donner des coordonnées exacts"
+          element: text
+          value: ""
+          
+      - name: inscription
+        field:
+          label: Lien vers le bulletin d'inscription (facultatif)
+          element: text
+          value: ""
+      - name: plaquette
+        field:
+          label: Lien vers la plaquette en pdf (facultatif)
+          element: text
+          value: ""
+      
     
     _concerts:
       - name: "published"
@@ -215,6 +279,8 @@ prose:
     - /compiled_assets
     - /images
     - /node_modules
+    - /chanter
+    - /progresser
     - .gitignore
     - .stylelintrc
     - .uploaded.sha1

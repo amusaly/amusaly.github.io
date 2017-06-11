@@ -6,6 +6,6 @@ callback([
   {
     "name": "{{prof.title}}",
     "value": "{{prof.title}}"
-  } {% unless forloop.last %},{% endunless%}
+  } {% unless forloop.last %},{% endunless %}
 {% endfor %}
 ])

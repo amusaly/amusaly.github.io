@@ -1,4 +1,5 @@
 ---
+layout: old-chanter
 title: De Usu Canendi
 subtitle: "&laquo;&nbsp;De la pratique du chant&nbsp;&raquo;"
 flash: "Nous recrutons des voix&nbsp;d'hommes"
@@ -17,9 +18,8 @@ Le choeur est ouvert à tous, même débutants, dans la limite des places dispon
 "
 
 section_3_title: "Le chef de choeur"
-profimage: "/images/profs/Benjamin_Ingrao tête.png"
 section_3: "<a href=\"/les-profs/benjamin-ingrao\">Benjamin Ingrao</a>"
-section_3_long: false
+profimage: "/images/profs/Benjamin_Ingrao%20t%C3%AAte.png"
 
 quand: "Le lundi soir de 19h à 21h</p><p>Une trentaine de répétitions en vue des concerts au mois de juin"
 adresse: 16 rue des Chartreux, 69001 Lyon
