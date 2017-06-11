@@ -10,11 +10,11 @@ layout: default
 {% assign previous = 0 %}
 {% assign title_shown = false %}
 
-{% for unused in site.categories.concerts %}
+{% for unused in site.concerts %}
   {% assign found = false %}
   {% assign latest = 0 %}
 
-  {% for post in site.categories.concerts %}
+  {% for post in site.concerts %}
     {% assign concert_date = post.concert_1_date %}
     <p hidden>Examining {{ post.title }} # {{ post.concert_1_date }}<br>
     {{ latest }} # {{ previous }}</p>
@@ -94,11 +94,11 @@ layout: default
 {% assign latest = 0 %}
 {% assign previous = 0 %}
 
-{% for unused in site.categories.concerts %}
+{% for unused in site.concerts %}
   {% assign found = false %}
   {% assign latest = 0 %}
 
-  {% for post in site.categories.concerts %}
+  {% for post in site.concerts %}
     {% assign concert_date = post.concert_1_date %}
     <p hidden>Examining {{ post.title }} # {{ post.concert_1_date }}<br>
     {{ latest }} # {{ previous }}</p>

@@ -23,6 +23,9 @@ sass:
   sass_dir: _sass
 permalink: /:categories/:year/:month/:slug/
 timezone: Europe/Paris
+collections:
+  concerts:
+    layout: concert
 defaults:
   -
     scope:
@@ -95,12 +98,13 @@ prose:
     "":
       - name: "title"
         field:
-          - label: "titre"
-          - element: "text"
+          - label: Titre
+          - element: text
           - help: "Titre affiché par le navigateur"
           - value: ""
       - name: "description"
         field:
-          - element: "text"
+          - label: Description
+          - element: text
           - help: "Description pour Google"
           - value: ""
