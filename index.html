@@ -19,24 +19,6 @@ title: Amusaly
 
     <div class="actualités-agenda">
       <h3>Actualités</h3>
-      <ul>
-        <li>Un chef, deux choeurs, un concert&nbsp;: Musique baroque sacrée.
-          <a href="concerts/2017-06-17-18"><img src="/images/affiches/AFFICHE-juin2017.jpg" alt="" /></a>
-        </li>
-        <li>Le stage d'été "<a href="/chanter/stage-d'été">Le retour des Splendeurs du Roy</a>" se tiendra du 23 au 27 août.
-          <img src="/images/affiches/stage%20d'%C3%A9t%C3%A9%202017.jpg" alt="" />
-        </li>
-      </ul>
-<!--
-      <h3>Agenda</h3>
-      <p>N'hésitez pas à <a href="/Bulletin d'inscription.pdf?{{ site.time | date: '%s' }}" target="_blank">vous inscrire</a> rapidement, les places sont limitées</p>
-      <ul>
-        <li><strong>14 janvier</strong><br/><a href="/chanter/choeur-d'hiver/">Le choeur d'hiver</a></li>
-        <li><strong>10 février</strong><br/><a href="/concerts/2017-02-10/">Concert partagé
-          <img alt="Concert partagé avec le Petit Choeur" src="/images/affiches/2017-02-10.jpg"/>
-        </a></li>
-        <li><strong>18 février</strong><br/>La deuxième session des <a href="/progresser/petits-ensembles/?20161208">Petits Ensembles</a></li>
-      </ul>
--->
+      {% for item in site.nouvelles %}<section class="news">{{item.output}}</section>{% endfor %}
     </div>
   </div>

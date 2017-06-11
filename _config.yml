@@ -26,6 +26,8 @@ timezone: Europe/Paris
 collections:
   concerts:
     layout: concert
+  nouvelles:
+    output: false
 defaults:
   -
     scope:
@@ -64,6 +66,11 @@ prose:
   rooturl: ''
   metadata:
     "":
+      - name: "published"
+        field:
+          label: "Publié"
+          element: "checkbox"
+          value: "true"
       - name: "title"
         field:
           - label: Titre
