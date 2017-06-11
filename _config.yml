@@ -71,12 +71,6 @@ prose:
           label: "Publié"
           element: "checkbox"
           value: "true"
-      - name: "title"
-        field:
-          - label: Titre
-          - element: text
-          - help: "Titre affiché par le navigateur"
-          - value: ""
       - name: "description"
         field:
           - label: Description
