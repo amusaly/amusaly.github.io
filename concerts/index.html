@@ -15,8 +15,8 @@ layout: default
   {% assign latest = 0 %}
 
   {% for post in site.categories.concerts %}
-    {% assign concert_date = post.concerts.first.date %}
-    <p hidden>Examining {{ post.title }} # {{ post.concerts.first.date }}<br>
+    {% assign concert_date = post.concert_1_date %}
+    <p hidden>Examining {{ post.title }} # {{ post.concert_1_date }}<br>
     {{ latest }} # {{ previous }}</p>
 
     {% if concert_date < site.time %}
@@ -36,7 +36,7 @@ layout: default
   {% endfor %}
 
   {% if found %}
-    {% assign previous = found.concerts.first.date %}
+    {% assign previous = found.concert_1_date %}
     <p hidden>
       {{ found.title }}
       {{ found.permalink }}
@@ -99,8 +99,8 @@ layout: default
   {% assign latest = 0 %}
 
   {% for post in site.categories.concerts %}
-    {% assign concert_date = post.concerts.first.date %}
-    <p hidden>Examining {{ post.title }} # {{ post.concerts.first.date }}<br>
+    {% assign concert_date = post.concert_1_date %}
+    <p hidden>Examining {{ post.title }} # {{ post.concert_1_date }}<br>
     {{ latest }} # {{ previous }}</p>
 
     {% if concert_date > site.time %}
@@ -126,7 +126,7 @@ layout: default
   {% endfor %}
 
   {% if found %}
-    {% assign previous = found.concerts.first.date %}
+    {% assign previous = found.concert_1_date %}
     <p hidden>
       {{ found.title }}
       {{ found.permalink }}

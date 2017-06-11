@@ -1,0 +1,44 @@
+prose:
+  rooturl: ''
+  ignore:
+    - /_css
+    - /_includes
+    - /_jsx
+    - /_layouts
+    - /_site
+    - /_stats
+    - /compiled_assets
+    - /images
+    - /node_modules
+    - .gitignore
+    - .stylelintrc
+    - .uploaded.sha1
+    - Gemfile
+    - Gemfile.lock
+    - Omnia*
+    - TODO.md
+    - amusaly.sublime-project
+    - browerslist
+    - midi.html
+    - *.js
+  siteurl: 'http://amusaly.github.io/'
+  relativeLinks: 'http://amusaly.github.io/links.jsonp'
+  media: 'images'
+  metadata:
+    concerts/_posts:
+      - name: "title"
+        field:
+          - element: "text"
+          - value: ""
+          - placeholder: "Titre affiché par le navigateur"
+          - value: ""
+      - name: "description"
+        field:
+          - element: "text"
+          - placeholder: "Description pour Google"
+          - value: ""
+      - name: "affiche"
+        field:
+          - element: "text"
+          - placeholder: "Chemin de l'affiche"
+          - value: ""
