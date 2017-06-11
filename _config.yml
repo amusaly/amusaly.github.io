@@ -107,3 +107,18 @@ prose:
           - element: "text"
           - placeholder: "Chemin de l'affiche"
           - value: ""
+      - name: "concert_1_date"
+        field:
+          - element: "text"
+          - placeholder: "Date du 1er concert"
+          - value: ""
+      - name: "concert_1_lieu"
+        field:
+          - element: "text"
+          - placeholder: "Lieu du 1er concert"
+          - value: ""
+      - name: "concert_1_adresse"
+        field:
+          - element: "text"
+          - placeholder: "Adresse du lieu du 1er concert"
+          - value: ""
