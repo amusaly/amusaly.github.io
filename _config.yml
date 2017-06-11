@@ -82,6 +82,9 @@ prose:
     - "*.js"
     - CNAME
     - "*.pdf"
+    - browserslist
+    - favicon.ico
+    - package.json
   siteurl: 'https://amusaly.github.io/'
   relativeLinks: 'https://amusaly.github.io/links.jsonp'
   media: 'images'
