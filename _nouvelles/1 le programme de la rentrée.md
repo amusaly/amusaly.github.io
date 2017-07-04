@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 Le programme de la rentrée est déjà disponible
