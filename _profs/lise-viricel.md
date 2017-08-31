@@ -1,6 +1,7 @@
 ---
 title: Lise Viricel
 photo: "/images/profs/Lise-Viricel-350x500.jpg"
+headshot: "/images/profs/Lise_Viricel_2.jpg"
 show_in_list: true
 ---
 

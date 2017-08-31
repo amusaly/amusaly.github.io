@@ -31,7 +31,7 @@ collections:
     permalink: /les-profs/:name/
   activites:
     output: true
-    permalink: /activites/:name/
+    permalink: /activités/:name/
   nouvelles:
     output: false
 defaults:
@@ -132,6 +132,7 @@ prose:
         field:
           label: Catégorie
           element: multiselect
+          alterable: false
           options:
             - name: Chanter
               value: chanter
@@ -185,13 +186,13 @@ prose:
       - name: quand
         field:
           label: Quand
-          element: textarea
+          element: text
           value: ""
       
       - name: tarifs
         field:
           label: Tarifs
-          element: textarea
+          element: text
           value: ""
       
       - name: adresse

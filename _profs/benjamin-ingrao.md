@@ -1,6 +1,7 @@
 ---
 title: Benjamin Ingrao
 photo: "/images/profs/Ben5-350x500.jpg"
+headshot: "/images/profs/Benjamin_Ingrao tête.png"
 show_in_list: true
 ---
 

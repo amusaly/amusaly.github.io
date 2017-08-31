@@ -3,9 +3,6 @@ layout: default
 ---
 
 
-
-
-
   <h1>{{ page.title }}
 
     {% if page.subtitle and page.subtitle != "" %}
@@ -26,10 +23,12 @@ layout: default
       <p class="text-xs-center">{{ page.intro }}</p>
     {% endif %}
 
+    {% if page.section_1 and page.section_1 != "" %}
       <h3 class="-m-a-0">{{ page.section_1_title }}</h3>
       <p>{{ page.section_1 }}</p>
     {% if page.section_1_long and page.section_1_long != "" %}
       <p>{{ page.section_1_long }}</p>
+    {% endif %}
     {% endif %}
 
       <h3 class="-m-a-0">{{ page.section_2_title }}</h3>
@@ -97,7 +96,8 @@ layout: default
 
       </li>
 
-    {% if (page.inscription and page.inscription != "") or (page.plaquette and page.plaquette != "") %}
+  {% if page.inscription or page.plaquette %}
+    {% if page.inscription != "" or page.plaquette != "" %}
       <li>
         <h3 class="-m-a-0">S'inscrire</h3>
       {% if page.plaquette and page.plaquette != "" %}
@@ -108,6 +108,7 @@ layout: default
       {% endif %}
       </li>
     {% endif %}
+  {% endif %}
 
     </ul>
   </div>

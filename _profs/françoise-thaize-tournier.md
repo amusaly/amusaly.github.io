@@ -1,6 +1,7 @@
 ---
 title: "Françoise Thaize-Tournier"
 photo: "/images/profs/Francoise-Thaize-Tournier-350x500.png"
+headshot: "/images/profs/Francoise-Thaize-Tournier.png"
 show_in_list: true
 ---
 

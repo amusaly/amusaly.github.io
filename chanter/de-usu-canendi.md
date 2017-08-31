@@ -24,5 +24,5 @@ profimage: "/images/profs/Benjamin_Ingrao%20t%C3%AAte.png"
 quand: "Le lundi soir de 19h à 21h</p><p>Une trentaine de répétitions en vue des concerts au mois de juin"
 adresse: 16 rue des Chartreux, 69001 Lyon
 citymapper_lien: "https://citymapper.com/go/dcthqv"
-tarifs: "185 € + 50 € d’adhésion"
+tarifs: "185 € + 20 € d’adhésion"
 ---

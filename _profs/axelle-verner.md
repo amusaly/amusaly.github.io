@@ -1,6 +1,7 @@
 ---
 title: Axelle Verner
 photo: "/images/profs/Axelle Verner 7x10.jpg"
+headshot: "/images/profs/Axelle Verner-small.jpg"
 show_in_list: false
 ---
 

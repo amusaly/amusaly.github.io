@@ -1,6 +1,7 @@
 ---
 title: Laure-Carlyne Crouzet
 photo: "/images/profs/Laure-Carlyne-350x500-bokeh.jpg"
+headshot: false
 show_in_list: true
 ---
 

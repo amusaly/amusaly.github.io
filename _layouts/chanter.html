@@ -3,9 +3,6 @@ layout: default
 ---
 
 
-
-
-
   <h1>{{ page.title }}
 
     {% if page.subtitle and page.subtitle != "" %}
@@ -21,22 +18,6 @@ layout: default
 
   <div class="flex -col -row-lg">
     <div class="-grow">
-
-    {% if page.intro and page.intro != "" %}
-      <p class="text-xs-center">{{ page.intro }}</p>
-    {% endif %}
-
-      <h3 class="-m-a-0">{{ page.section_1_title }}</h3>
-      <p>{{ page.section_1 }}</p>
-    {% if page.section_1_long and page.section_1_long != "" %}
-      <p>{{ page.section_1_long }}</p>
-    {% endif %}
-
-      <h3 class="-m-a-0">{{ page.section_2_title }}</h3>
-      <p>{{ page.section_2 }}</p>
-    {% if page.section_2_long and page.section_2_long != "" %}
-      <p>{{ page.section_2_long }}</p>
-    {% endif %}
 
       {{ content }}
 
@@ -58,7 +39,15 @@ layout: default
       <li>
         <h3 class="site-title">{{ page.profs_title }}</h3>
         <div class="flex -row -vcenter">
-          <img class="-h3em -p-r-half -block" src="{% if page.profimage %}{{ page.profimage }}{% else %}/images/band-master.svg{% endif %}" alt=""/>
+          {% assign profimage = "/images/band-master.svg" %}
+          {% if page.profs.size == 1 %}
+            {% for sprof in site.profs %}
+              {% if sprof.title == page.profs.first and sprof.headshot and sprof.headshot != "" %}
+                {% assign profimage = sprof.headshot %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+          <img class="-h3em -p-r-half -block" src="{{ profimage }}" alt=""/>
           <p>
             {% for pprof in page.profs %}
               {% assign last = forloop.last %}
@@ -106,7 +95,8 @@ layout: default
 
       </li>
 
-    {% if (page.inscription and page.inscription != "") or (page.plaquette and page.plaquette != "") %}
+  {% if page.inscription or page.plaquette %}
+    {% if page.inscription != "" or page.plaquette != "" %}
       <li>
         <h3 class="-m-a-0">S'inscrire</h3>
       {% if page.plaquette and page.plaquette != "" %}
@@ -117,6 +107,7 @@ layout: default
       {% endif %}
       </li>
     {% endif %}
+  {% endif %}
 
     </ul>
   </div>
