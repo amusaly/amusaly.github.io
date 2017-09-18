@@ -17,7 +17,7 @@ section_3_title: "Le chef de choeur"
 profimage: "/images/profs/Francoise-Thaize-Tournier.png"
 section_3: "<a href=\"/les-profs/françoise-thaize-tournier\">Françoise THAIZE-TOURNIER</a>"
 
-quand: "Le samedi matin de 10h à 12h30</p><p>15 répétitions du 23 septembre jusqu'au 31 mars"
+quand: "Le samedi matin de 10h à 12h30</p><p>15 répétitions du 7 octobre jusqu'au 18 mars"
 adresse: 16 rue des Chartreux, 69001 Lyon
 citymapper_lien: "https://citymapper.com/go/dcthqv"
 tarifs: "160 € + 20 € d’adhésion"
