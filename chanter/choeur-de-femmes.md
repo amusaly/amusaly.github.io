@@ -22,3 +22,5 @@ adresse: 16 rue des Chartreux, 69001 Lyon
 citymapper_lien: "https://citymapper.com/go/dcthqv"
 tarifs: "160 € + 20 € d’adhésion"
 ---
+
+<img alt="" src="/chanter/Flyer pour choeur de femmes.jpg">
